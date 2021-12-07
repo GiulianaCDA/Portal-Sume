@@ -1,0 +1,194 @@
+<!--Breadcrumb-->
+<nav  class="ms-4" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Início</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Cadastrar bens</li>
+    </ol>
+</nav>
+
+<!--Cadastrar Bens-->
+<div class="card">
+    <div class="card-header ">
+        <h5 class="card-title">Cadastrar bens</h5>
+    </div>
+    <div class="card-body">
+
+        <!--Abas do formulário-->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="geral-tab" data-bs-toggle="tab" data-bs-target="#geral" 
+                type="button" role="tab" aria-controls="geral" aria-selected="true">Geral
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="bens-tab" data-bs-toggle="tab" data-bs-target="#bens" 
+                type="button" role="tab" aria-controls="bens" aria-selected="true">Bens
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="observacoes-tab" data-bs-toggle="tab" data-bs-target="#observacoes" 
+                type="button" role="tab" aria-controls="observacoes" aria-selected="true">Observações
+                </button>
+            </li>
+        </ul>
+        <!--Abas do formulário-->
+
+        <div class="tab-content mt-4" id="myTabContent">
+
+            <!--Aba Geral-->
+            <div class="tab-pane fade show active" id="geral" role="tabpanel" aria-labelledby="geral-tab">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-auto">
+                            <label for="numero" class="form-label">Número (aaaaxxxxxx)</label>
+                            <input type="text" readonly class="form-control" id="numero" disable >
+                        </div>
+                        <div class="col-auto col-middle">
+                            <label for="fornecedor" class="form-label">Fornecedor</label>
+                            <input type="text" class="form-control" id="fornecedor">
+                        </div>
+                        <div class="col-auto">
+                            <label for="nota-fiscal" class="form-label">Nota fiscal</label>
+                            <input type="text" class="form-control" id="nota-fiscal">
+                        </div>
+                    </div>
+                    <div class="row g-3 mt-4">
+                        <div class="col-auto">
+                            <label for="numero" class="form-label">Item nota fiscal</label>
+                            <input type="text" class="form-control" id="numero" >
+                        </div>
+                        <div class="col-auto col-middle">
+                            <label for="fornecedor" class="form-label">Quantidade vinculada</label>
+                            <input type="text" readonly class="form-control" id="fornecedor" disable>
+                        </div>
+                        <div class="col-auto">
+                            <label for="nota-fiscal" class="form-label">Quantidade disponível</label>
+                            <input type="text" readonly class="form-control" id="nota-fiscal" disable>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!--// Aba Geral-->
+
+            <!--Aba bens-->
+            <div class="tab-pane fade" id="bens" role="tabpanel" aria-labelledby="bens-tab">
+                <div class="card">
+                    <div class="card-header ">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title">Bens</h5>
+                            <button type="button" class="btn btn-primary turquoise-button" data-bs-toggle="modal" data-bs-target="#cadastrarItemModal">
+                                <i class="bi bi-plus-lg"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!--Tabela de listagem de bens-->
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col"># Id</th>
+                                <th scope="col">Tombamento</th>
+                                <th scope="col">Data de cadastro</th>
+                                <th scope="col">Valor</th> 
+                                <th scope="col">Itens</th>
+                              </tr>
+                            </thead> 
+                            <tbody>
+                                <tr *ngFor="let b of bens; let i=index">
+                                    <th scope="row">{{ b.id }}</th>
+                                    <td>{{ b.tombamento }}</td>
+                                    <td>{{ b.data_cadastro }}</td>
+                                    <td>{{ b.valor_unitario}}</td>
+                                    <td> <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary turquoise-button" data-bs-toggle="modal" data-bs-target="#visualizarItemModal">
+                                            <i class="bi bi-search"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-primary purple-button" 
+                                        style="margin-left: 10px;" (click)="del(b)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--// Tabela de listagem de bens-->
+                    </div>
+                </div>
+            </div>
+            <!--// Aba bens-->
+
+            <!--Aba observações-->
+            <div class="tab-pane fade" id="observacoes" role="tabpanel" aria-labelledby="observacoes-tab">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Observações</h5>
+                    </div>
+                    <div class="card-body">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <!--// Aba observações-->
+
+        <!--Alerta de validação do formulário-->
+        </div>
+        <div class="alert alert-success text-center mt-4" id="sucess" role="alert">
+            Cadastro registrado!
+        </div>    
+    </div>
+
+    <!--Botão de enviar formulário-->
+    <div class="card-footer">
+        <div class="d-flex justify-content-end">
+            <div class="btn-group gap-2" role="group" aria-label="Basic-example">
+                <button class="btn btn-primary purple-button">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <!--// Botão de enviar formulário-->
+</div>
+
+<!-- Modal Visualizar Item-->
+<div class="modal fade" id="visualizarItemModal" tabindex="-1" aria-labelledby="visualizarItemModal" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="visualizarItemModalLabel">Visualizar item</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"> 
+            <dl *ngFor="let b of bens; let i=index" >
+                <dt>Estado</dt>
+                <dd>{{ b.estado }}</dd>
+
+                <dt>Marca</dt>
+                <dd>{{ b.marca }}</dd>
+
+                <dt>Situação de uso</dt>
+                <dd>{{ b.situacao }}</dd>
+            </dl>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- Modal Cadastrar Item-->
+<div class="modal fade" id="cadastrarItemModal" tabindex="-1" aria-labelledby="cadastrarItemModal" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="adastrarItemModalLabel">Cadastrar bem</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <!--Formulário de cadastro de bem-->
+            <app-create></app-create>
+            <!--// Formulário de cadastro de bem-->
+        </div>
+    </div>
+    </div>
+</div>

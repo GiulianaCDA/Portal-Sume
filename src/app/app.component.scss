@@ -1,0 +1,23 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:  red!important;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+.header{
+    max-width: 990px;
+    width: 100%;
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+#content{
+    width: 100%;
+    min-height: 100vh;
+}

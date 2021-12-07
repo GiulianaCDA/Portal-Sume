@@ -1,0 +1,70 @@
+#sidebar{
+    background: #495172;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    height: 100%;
+}
+#sidebar img{
+    width: 220px;
+}
+#sidebar ul.components {
+    padding: 10px 0;
+}
+#sidebar ul li a{
+    display: block;
+}
+.menu-item{
+    color: white !important;
+    padding: 10px 20px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    font-weight: 300;
+    background: #495172!important;
+    border: none;
+}
+.menu-item a:hover{
+    background: #3c4463;
+    transition: background .4s linear;
+}
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+#sidebar ul li i{
+    color: #76debc;
+    font-size: 23px;
+    padding-right: 10px;
+}
+.sidebar-header{
+    text-align: center;
+}
+/*SUBMENU*/
+
+.accordion-button{
+    box-shadow: none!important;
+}
+.accordion-body {
+    padding: 0!important;
+    font-size: .9rem;
+}
+#sidebar .accordion-body i{
+    font-size: 15px;
+}
+.accordion-button:focus {
+    border: none!important;
+    box-shadow: none!important;
+}
+.accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  }
+  .accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-right-radius: 0!important; 
+    border-bottom-left-radius: 0!important;
+}
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #3c4463!important;
+    border: none!important;
+}

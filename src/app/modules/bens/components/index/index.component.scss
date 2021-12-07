@@ -1,0 +1,67 @@
+/*------- BREADCRUMB -----*/
+
+.breadcrumb{
+    font-weight: 300;
+}
+.breadcrumb a{
+    text-decoration: none;
+    color: #495172;
+}
+.breadcrumb a:hover{
+    color: #6d769c;
+}
+.breadcrumb li.active{
+    color: #6d769c;
+}
+
+/*------- CADASTRO -------*/
+
+.card{
+    width: 95%;
+    margin-left: 25px;
+}
+
+.card-title{
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1em;
+    color: #495172;
+}
+.card .nav-link{
+    color: #747da0!important;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: .9em;
+}
+.nav-tabs .nav-link.active{
+    color: #495172!important;
+}
+
+.col-middle{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+form label{
+    color: #495172;
+}
+
+.purple-button{
+    background: #495172!important;
+    color: white!important;
+    border: none!important;
+}
+.turquoise-button{
+    background: #76debc!important;
+    color: #495172!important;
+    border: none!important;
+}
+
+thead{
+    background: #495172;
+    color: white!important;
+}
+
+h5{
+    color:#495172;
+}

@@ -1,27 +1,15 @@
-# CrmSume
+# CRM Portal Sumé
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+Adaptação do Portal Sumé para Angular para a atividade proposta.
 
-## Development server
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.1.13.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+# Instruções
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Na barra lateral, é possível clicar em "Cadastrar Bem", carregando o componente principal da página.
 
-## Build
+Na aba Bens, é possível visualizar o Tombamento(Criado artificialmente como ano de término + 123456), Data de cadastro, registrada no momento em que o bem foi adicionado, e o valor de cada um dos bens, além de poder adicionar bens por meio de um formulário simples. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Também há uma opção para deletar bens. A edição de bens não é possível já que
+não consta no backlog.

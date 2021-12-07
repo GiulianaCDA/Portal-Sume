@@ -1,0 +1,33 @@
+<form [formGroup]="bensForm" (ngSubmit)="onSubmit()"> 
+    <div class="row g-3">
+        <div class="col-auto">
+            <label for="quantidade" class="form-label">Quantidade</label>
+            <input type="number" class="form-control" id="quantidade" formControlName='quantidade'>
+        </div>
+        <div class="col-auto">
+                <label for="marca" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="marca" formControlName='marca'>
+        </div>
+        <div class="col-auto">
+                <label for="valor-unitario" class="form-label">Valor unitário</label>
+                <input type="text" class="form-control" id="valor_unitario" formControlName='valor_unitario'>
+        </div>
+    </div>
+    <div class="row g-3">
+        <div class="col-auto">
+            <label for="inicio-garantia" class="form-label">Início de garantia</label>
+            <input type="date"  class="form-control" id="inicio_garantia" formControlName='inicio_garantia'>
+            </div>
+            <div class="col-auto">
+                <label for="termino-garantia" class="form-label">Término de garantia</label>
+                <input type="date" class="form-control" id="termino_garantia" formControlName='termino_garantia'>
+            </div>
+            <div class="col-auto">
+                <label for="text-obervacoes" class="form-label">Observações</label>
+                <textarea type="textarea" rows="3" class="form-control" id="text-obervacoes" formControlName='observacoes'></textarea>
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" [disabled] ="!bensForm.valid">Adicionar</button>
+    </div>
+</form>

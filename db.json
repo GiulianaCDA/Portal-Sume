@@ -1,0 +1,17 @@
+{
+  "bens": [
+    {
+      "marca": "magiu",
+      "quantidade": 55,
+      "valor_unitario": "1000",
+      "inicio_garantia": "2001-09-01",
+      "termino_garantia": "2001-12-10",
+      "observacoes": "feliz magiuday",
+      "estado": "bom",
+      "situacao": "em uso",
+      "id": 1,
+      "data_cadastro": "2021-12-7",
+      "tombamento": "2001123456"
+    }
+  ]
+}

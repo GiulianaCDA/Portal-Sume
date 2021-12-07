@@ -1,0 +1,35 @@
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="../../assets/logo.png" alt="logotipo do Portal Sumé">
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a routerLink="/" class="menu-item"><i class="bi bi-house"></i>Início</a>
+                </li>
+                <li> 
+
+                    <div class="accordion accordion-flush" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button menu-item" id="button-submenu" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="bi bi-building"></i>
+                                    Patrimônios
+                            </button>
+                          </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <!-- Submenu -->
+                                    <ul class="list-unstyled list-group" id="pageSubmenu">
+                                        <li>
+                                            <a routerLink="/bens" class="menu-item"><i class="bi bi-plus-square"></i>Cadastrar bens</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>

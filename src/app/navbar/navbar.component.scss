@@ -1,0 +1,32 @@
+/*----------TOP NAV---------*/
+.navbar{
+    padding: 15px 10px;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    background: #76debc;
+    height: 40px;
+}
+.navbar ul{
+    margin-top: -15px;
+}
+.navbar a{
+    color: #495172;
+    font-size: .9em;
+}
+.navbar a:hover{
+    color: #6d769c;
+}
+.navbar a i{
+    padding-right: 10px;
+    font-size: 1.2em;
+}
+
+/*------- CONTENT ---------*/
+p.welcome{
+    margin-left: 100px;
+    text-align: center;
+    color: #6d769c;
+}
+p.welcome span{
+    font-size: 2.5em;
+}

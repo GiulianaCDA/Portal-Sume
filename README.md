@@ -1,6 +1,6 @@
 # Portal Sumé
 
-Esse repositório consiste na implementação do backlog proposto no curso de formação de desenvolvedores full stack do lccv. O Portal Sumé permite realizar o cadastro de bens e a visualizar bens já cadastrados. Foi possível utilizar Bootstrap e Angular no front-end. No que tange ao Bootstrap, foram feitas algumas customizações no css padrão a fim de tornar o Portal Sumé uma plataforma mais visualmente agradável aos usuários. Docker e Django foram usados no back-end.
+O Portal Sumé permite realizar o cadastro de bens e a visualizar bens já cadastrados. Foi possível utilizar Bootstrap e Angular no front-end. No que tange ao Bootstrap, foram feitas algumas customizações no css padrão a fim de tornar o Portal Sumé uma plataforma mais visualmente agradável aos usuários. Docker e Django foram usados no back-end.
 
 ## Tarefas realizadas
 

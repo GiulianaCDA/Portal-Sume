@@ -1,5 +1,5 @@
 
-#Portal Sumé
+# Portal Sumé
 O Portal Sumé permite realizar o cadastro de bens e a visualizar bens já cadastrados. Foi possível utilizar Bootstrap e Angular no front-end. No que tange ao Bootstrap, foram feitas algumas customizações no css padrão a fim de tornar o Portal Sumé uma plataforma mais visualmente agradável aos usuários. Docker e Django foram usados no back-end.
 
 ## Tarefas realizadas

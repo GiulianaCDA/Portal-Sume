@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  django-db:
+    image: postgres:12.6
+    container_name: django-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: patrimonio-db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: portalsume1234
+    ports:
+      - "5432:5432"  
+    networks:
+          - db-network
+
+  sume-backend:
+        container_name: sume-backend
+        restart: unless-stopped
+        environment:
+          DJANGO_SETTINGS_MODULE: 'portalsume.settings'
+        build: 
+          context: back_end
+          dockerfile: ../Dockerfile  
+    
+        command:  bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+        volumes:
+          - ./back_end:/code
+        ports:
+          - "8000:8000"
+        depends_on:
+          - django-db
+        networks:
+          - db-network
+
+networks:
+  db-network:
+    driver: bridge

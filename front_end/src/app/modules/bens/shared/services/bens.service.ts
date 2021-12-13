@@ -35,8 +35,8 @@ export class BensService {
   }
 
   create(bem: Bem): Observable<Bem>{
-
-    return this.http.post<Bem>(this.bensUrl, bem, this.httpOptions)
+    /* Cria no db.json */
+    return this.http.post<Bem>('http://localhost:3000/bens', bem, this.httpOptions)
   }
 
   delete(bem: Bem | number): Observable<Bem>{

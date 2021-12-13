@@ -1,21 +1,32 @@
-# CRM Portal Sumé
+# Portal Sumé
 
-Adaptação do Portal Sumé para Angular para a atividade proposta. 
+Esse repositório consiste na implementação do backlog proposto no curso de formação de desenvolvedores full stack do lccv. O Portal Sumé permite realizar o cadastro de bens e a visualizar bens já cadastrados. Foi possível utilizar Bootstrap e Angular no front-end. No que tange ao Bootstrap, foram feitas algumas customizações no css padrão a fim de tornar o Portal Sumé uma plataforma mais visualmente agradável aos usuários. Docker e Django foram usados no back-end.
 
-Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 9.1.13.
+## Tarefas realizadas
 
+1. Integração do front-end com o back-end: as ações de cadastro e remoção de bens realizadas na interface do projeto são aplicadas também no banco de dados.
+3. Cadastrar um bem: todo bem cadastrado é armazenado no banco de dados e, após a atualização da página, é listado na aba Bens. 
+4. Deletar bem: o ícone de lixeira permite deletar um bem após a confirmação dessa ação.
+
+## Tarefas não realizadas
+
+## Dificuldades 
+
+## Requisitos necessários
+1. Angular CLI versão 9.1.13
+2. Docker
 
 ## Como executar
 
-1. É necessário executar o seguinte comando em distribuições Linux:
+3. Após obter o repositório e instalar as dependências necessárias, é necessário entrar na pasta front_end e executar o seguinte comando em distribuições Linux:
 
 ```
 ng serve
 ```
-2. Em seguida, deve-se abrir outra aba no terminal e executar o json server, a partir da instrução:
+2. Em seguida, deve-ser entrar na pasta back_end e executar a seguinte instrução para executar docker-compose:
 
 ```
-json-server --watch db.json
+docker-compose up
 ```
 
-Após o Portal Sumé ser carregado, é possível clicar em "Cadastrar Bem", onde será visto o componente principal da página. Na aba Bens, há uma tabela que permite a visualização do Tombamento (gerado a partir do ano de término + 123456), Data de cadastro, registrada no momento em que o bem foi adicionado, e o valor de cada um dos bens. É possível cadastrar um novo bem clicando no ícone '+'. Além disso, também há uma opção para deletar bens.
+

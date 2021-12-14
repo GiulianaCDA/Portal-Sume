@@ -5,14 +5,12 @@ O Portal Sumé permite realizar o cadastro de bens e a visualizar bens já cadas
 ## Tarefas realizadas
 
 1. Integração do front-end com o back-end
-1. Cadastrar um bem: O bem é cadastrado no arquivo json
+2. Cadastrar um bem: O bem é cadastrado no arquivo json
 3. Deletar bem: o ícone de lixeira permite deletar um bem diretamente no banco de dados.
-4. Criação dos componentes no Angular
 5. Configuração do FormGroup
-6. Deletar bem: o ícone de lixeira permite deletar um item do banco de dados.
-7. Criação e configuração do PostgreSQL
-8. Campos de 'Fornecedor' e 'Notas Fiscais' na aba Geral são capazes de listar os dados contidos no banco. 
-9. Criação da API
+6. Criação e configuração do PostgreSQL
+7. Campos de 'Fornecedor' e 'Notas Fiscais' na aba Geral são capazes de listar os dados contidos no banco. 
+8. Criação da API
 
 ## Tarefas não realizadas
 1. Aplicação das regras de negócio
